@@ -177,7 +177,7 @@ def build_pdf(doc):
 
     story = [Paragraph(long_date(doc.get("doc_date")), _st("date", alignment=TA_RIGHT)),
              Spacer(1, 12), Paragraph(lines(doc.get("recipient")), b),
-             Paragraph(f"<b>{e(d['doc_title'])}</b>", _st("t", alignment=TA_CENTER, spaceBefore=14, spaceAfter=12, leftIndent=0, rightIndent=0)),
+             Paragraph("<b>PROFORMA INVOICE</b>", _st("t", alignment=TA_CENTER, spaceBefore=14, spaceAfter=12, leftIndent=0, rightIndent=0)),
              tbl, closing]
 
     def decorate(c, _doc):
