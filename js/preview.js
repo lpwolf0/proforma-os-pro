@@ -32,7 +32,7 @@ export function paginate(container, d) {
   };
 
   let body = newPage();
-  body.insertAdjacentHTML('beforeend', `<p class="pf-date">${longDate(d.doc_date)}</p><div class="pf-recipient">${nl2br(d.recipient)}</div><div class="pf-title">${esc(dt.doc_title || 'INVOICE')}</div>`);
+  body.insertAdjacentHTML('beforeend', `<p class="pf-date">${longDate(d.doc_date)}</p><div class="pf-recipient">${nl2br(d.recipient)}</div><div class="pf-title">PROFORMA INVOICE</div>`);
   let table = makeTable(); body.appendChild(table); let tbody = table.tBodies[0];
 
   // a group of <tr> is placed as a unit; if it does not fit it starts a fresh page (unless the page is still empty)

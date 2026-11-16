@@ -2,7 +2,7 @@ import { supa } from '../supa.js';
 import { $, esc, toast } from '../util.js';
 
 const FIELDS = [['account_name', 'Account name'], ['bank', 'Bank'], ['account_no', 'Account number'], ['tin', 'TIN number'], ['signatory', 'Signatory'],
-  ['title', 'Signatory title'], ['sign_for', '“For:” line'], ['doc_title', 'Document heading'], ['vat_rate', 'VAT rate (%)']];
+  ['title', 'Signatory title'], ['sign_for', '“For:” line'], ['vat_rate', 'VAT rate (%)']];
 
 export async function render(el) {
   const { data: s, error } = await supa.from('pf_settings').select('*').single();
